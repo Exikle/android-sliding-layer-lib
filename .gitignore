@@ -38,5 +38,6 @@ gen
 
 # Gradle files
 .gradle/
+gradle
 build/
 Library/.settings/org.eclipse.jdt.core.prefs

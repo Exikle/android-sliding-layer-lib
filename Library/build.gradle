@@ -4,9 +4,9 @@ dependencies {
     compile "com.android.support:support-v4:18.0.0"
 }
 
-android {
+android{
     compileSdkVersion 18
-    buildToolsVersion "18.0.1"
+    buildToolsVersion "19.1.0"
 
     defaultConfig {
         minSdkVersion 4
