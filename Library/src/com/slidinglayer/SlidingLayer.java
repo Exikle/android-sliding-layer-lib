@@ -1118,11 +1118,6 @@ public class SlidingLayer extends FrameLayout {
         super.onLayout(changed, left, top, right, bottom);
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-    }
-
     private int[] getDestScrollPos() {
         return getDestScrollPos(0, 0);
     }
