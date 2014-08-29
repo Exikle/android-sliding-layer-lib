@@ -23,9 +23,6 @@
 
 package com.slidinglayer;
 
-import java.lang.reflect.Method;
-import java.util.Random;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -46,6 +43,9 @@ import android.view.WindowManager;
 import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 import android.widget.Scroller;
+
+import java.lang.reflect.Method;
+import java.util.Random;
 
 
 public class SlidingLayer extends FrameLayout {
@@ -510,12 +510,8 @@ public class SlidingLayer extends FrameLayout {
 
         final int action = ev.getAction();
 
-        if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL
-                || action == MotionEvent.ACTION_OUTSIDE) {
-            mLastTouchAllowed = false;
-        } else {
-            mLastTouchAllowed = true;
-        }
+        mLastTouchAllowed = !(action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL
+                || action == MotionEvent.ACTION_OUTSIDE);
 
         if (mVelocityTracker == null) {
             mVelocityTracker = VelocityTracker.obtain();
